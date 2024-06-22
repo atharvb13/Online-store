@@ -8,6 +8,7 @@ Frontend:-
 Backend:-
 1. npm install
 2. node index.js
+3. can use the /api/addProduct API to add product to database(image,name,description,price)
 
 ![image](https://github.com/atharvb13/Online-store/assets/85288007/f429b405-10d0-4544-b473-02ccf3ae00a9)
 
