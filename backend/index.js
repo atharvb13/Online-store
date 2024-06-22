@@ -34,6 +34,24 @@ app.get('/api/products', async (req, res) => {
       res.status(500).json({ message: error.message });
     }
   });
+
+app.post('/api/addProduct', async (req, res) => {
+    const { name, price, description,image } = req.body;
+  
+    const newProduct = new Product({
+      name,
+      price,
+      description,
+      image,
+    });
+  
+    try {
+      const savedProduct = await newProduct.save();
+      res.status(201).json(savedProduct);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  });
   
   app.get('/api/products/:id', async (req, res) => {
     try {
